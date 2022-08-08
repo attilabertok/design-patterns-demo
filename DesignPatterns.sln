@@ -12,21 +12,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Strategy", "Strategy", "{29
 		Strategy\readme.md = Strategy\readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Naive", "Strategy\Strategy.HeadFirst\Strategy.HeadFirst.Naive.csproj", "{9838795A-7748-4FFA-84D5-BEFDE287966A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.HeadFirst.Naive", "Strategy\Strategy.HeadFirst\Strategy.HeadFirst.Naive.csproj", "{9838795A-7748-4FFA-84D5-BEFDE287966A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC31917A-B86C-4B91-A6CD-A7202961713F}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
 		README.md = README.md
 		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Inheritance", "Strategy.HeadFirst.Inheritance\Strategy.HeadFirst.Inheritance.csproj", "{87748A03-6EF8-427B-B784-566F5D63AFAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.HeadFirst.Inheritance", "Strategy.HeadFirst.Inheritance\Strategy.HeadFirst.Inheritance.csproj", "{87748A03-6EF8-427B-B784-566F5D63AFAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Final", "Strategy.HeadFirst.Final\Strategy.HeadFirst.Final.csproj", "{E9620F8B-97D5-4585-8763-E8CBE601AAF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.HeadFirst.Final", "Strategy.HeadFirst.Final\Strategy.HeadFirst.Final.csproj", "{E9620F8B-97D5-4585-8763-E8CBE601AAF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Common", "Strategy.HeadFirst.Common\Strategy.HeadFirst.Common.csproj", "{AEA89060-7FDB-4ED2-821C-E9F9695475F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.HeadFirst.Common", "Strategy.HeadFirst.Common\Strategy.HeadFirst.Common.csproj", "{AEA89060-7FDB-4ED2-821C-E9F9695475F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
