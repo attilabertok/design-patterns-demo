@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32728.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder.Udemy", "Builder\Builder.Udemy\Builder.Udemy.csproj", "{2570B51E-EB0B-4203-9B58-9937AB3B749C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builder", "Builder", "{03A694FF-C78D-4A33-8619-0E9C9C80958C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Strategy", "Strategy", "{29545293-140E-415F-AAFB-E79083E52544}"
+	ProjectSection(SolutionItems) = preProject
+		Strategy\readme.md = Strategy\readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Naive", "Strategy\Strategy.HeadFirst\Strategy.HeadFirst.Naive.csproj", "{9838795A-7748-4FFA-84D5-BEFDE287966A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC31917A-B86C-4B91-A6CD-A7202961713F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		README.md = README.md
+		stylecop.json = stylecop.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Inheritance", "Strategy.HeadFirst.Inheritance\Strategy.HeadFirst.Inheritance.csproj", "{87748A03-6EF8-427B-B784-566F5D63AFAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Final", "Strategy.HeadFirst.Final\Strategy.HeadFirst.Final.csproj", "{E9620F8B-97D5-4585-8763-E8CBE601AAF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.HeadFirst.Common", "Strategy.HeadFirst.Common\Strategy.HeadFirst.Common.csproj", "{AEA89060-7FDB-4ED2-821C-E9F9695475F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2570B51E-EB0B-4203-9B58-9937AB3B749C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2570B51E-EB0B-4203-9B58-9937AB3B749C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2570B51E-EB0B-4203-9B58-9937AB3B749C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2570B51E-EB0B-4203-9B58-9937AB3B749C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9838795A-7748-4FFA-84D5-BEFDE287966A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9838795A-7748-4FFA-84D5-BEFDE287966A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9838795A-7748-4FFA-84D5-BEFDE287966A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9838795A-7748-4FFA-84D5-BEFDE287966A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87748A03-6EF8-427B-B784-566F5D63AFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87748A03-6EF8-427B-B784-566F5D63AFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87748A03-6EF8-427B-B784-566F5D63AFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87748A03-6EF8-427B-B784-566F5D63AFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9620F8B-97D5-4585-8763-E8CBE601AAF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9620F8B-97D5-4585-8763-E8CBE601AAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9620F8B-97D5-4585-8763-E8CBE601AAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9620F8B-97D5-4585-8763-E8CBE601AAF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA89060-7FDB-4ED2-821C-E9F9695475F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA89060-7FDB-4ED2-821C-E9F9695475F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA89060-7FDB-4ED2-821C-E9F9695475F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA89060-7FDB-4ED2-821C-E9F9695475F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2570B51E-EB0B-4203-9B58-9937AB3B749C} = {03A694FF-C78D-4A33-8619-0E9C9C80958C}
+		{9838795A-7748-4FFA-84D5-BEFDE287966A} = {29545293-140E-415F-AAFB-E79083E52544}
+		{87748A03-6EF8-427B-B784-566F5D63AFAA} = {29545293-140E-415F-AAFB-E79083E52544}
+		{E9620F8B-97D5-4585-8763-E8CBE601AAF4} = {29545293-140E-415F-AAFB-E79083E52544}
+		{AEA89060-7FDB-4ED2-821C-E9F9695475F1} = {29545293-140E-415F-AAFB-E79083E52544}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}
+	EndGlobalSection
+EndGlobal
