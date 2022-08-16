@@ -3,7 +3,7 @@ using Strategy.Dive.Final.RoutingStrategies;
 
 namespace Strategy.Dive.Final;
 
-public class Navigator
+public class Navigator : INavigator
 {
     private IRoutingStrategy? routingStrategy;
 
