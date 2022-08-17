@@ -1,4 +1,4 @@
-﻿using Strategy.Dive.Common;
+﻿using Strategy.Dive.Common.Routing;
 
 namespace Strategy.Dive.Final.Navigators.Interfaces;
 

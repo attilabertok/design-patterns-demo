@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-namespace Strategy.Ican.EqualityAndComparison;
+namespace Strategy.Ican.EqualityAndComparison.People.Factories;
 
 public static class PersonFactory
 {

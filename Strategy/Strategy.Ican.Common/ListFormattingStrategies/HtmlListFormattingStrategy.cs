@@ -1,6 +1,7 @@
 ﻿using System.Text;
 
 using Strategy.Ican.Common.ListFormattingStrategies.Interface;
+using Strategy.Ican.Common.Lists;
 
 namespace Strategy.Ican.Common.ListFormattingStrategies;
 

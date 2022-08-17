@@ -1,6 +1,6 @@
 ﻿using Strategy.Ican.Common.ListFormattingStrategies.Interface;
 
-namespace Strategy.Ican.Static;
+namespace Strategy.Ican.Static.TextProcessing;
 
 public class TextProcessor<TListFormattingStrategy>
     where TListFormattingStrategy : IListFormattingStrategy, new()

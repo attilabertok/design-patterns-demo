@@ -1,5 +1,7 @@
 ﻿using System.Collections.Immutable;
 
+using Strategy.Dive.Common.Routing;
+
 namespace Strategy.Dive.Common;
 
 public static class DurationCalculator

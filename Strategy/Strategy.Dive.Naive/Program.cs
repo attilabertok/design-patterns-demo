@@ -1,4 +1,5 @@
 ﻿using Strategy.Dive.Common;
+using Strategy.Dive.Common.Routing;
 using Strategy.Dive.Naive.Navigators;
 
 namespace Strategy.Dive.Naive

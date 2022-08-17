@@ -1,8 +1,8 @@
-﻿using Strategy.Ican.Common;
+﻿using Strategy.Ican.Common.Formatting;
 using Strategy.Ican.Common.ListFormattingStrategies;
 using Strategy.Ican.Common.ListFormattingStrategies.Interface;
 
-namespace Strategy.Ican.Dynamic;
+namespace Strategy.Ican.Dynamic.TextProcessing;
 
 public class TextProcessor
 {

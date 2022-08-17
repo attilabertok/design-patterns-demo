@@ -1,4 +1,4 @@
-﻿namespace Strategy.Ican.Common;
+﻿namespace Strategy.Ican.Common.Lists;
 
 public static class HtmlTag
 {

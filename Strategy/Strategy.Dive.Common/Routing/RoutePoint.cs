@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Strategy.Dive.Common;
+namespace Strategy.Dive.Common.Routing;
 
 public class RoutePoint
 {

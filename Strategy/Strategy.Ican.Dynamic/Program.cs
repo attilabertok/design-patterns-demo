@@ -1,4 +1,4 @@
-﻿using Strategy.Ican.Common;
+﻿using Strategy.Ican.Common.Formatting;
 
 namespace Strategy.Ican.Dynamic
 {

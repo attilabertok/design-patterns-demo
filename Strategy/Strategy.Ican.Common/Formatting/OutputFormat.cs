@@ -1,4 +1,4 @@
-﻿namespace Strategy.Ican.Common;
+﻿namespace Strategy.Ican.Common.Formatting;
 
 public enum OutputFormat
 {

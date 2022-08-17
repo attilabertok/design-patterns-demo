@@ -1,4 +1,6 @@
-﻿namespace Strategy.Ican.EqualityAndComparison
+﻿using Strategy.Ican.EqualityAndComparison.People.Factories;
+
+namespace Strategy.Ican.EqualityAndComparison
 {
     public static class Program
     {

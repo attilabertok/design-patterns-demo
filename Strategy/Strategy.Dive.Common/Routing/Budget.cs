@@ -1,4 +1,4 @@
-﻿namespace Strategy.Dive.Common;
+﻿namespace Strategy.Dive.Common.Routing;
 
 public enum Budget
 {
