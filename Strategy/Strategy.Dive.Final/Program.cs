@@ -1,4 +1,6 @@
 ﻿using Strategy.Dive.Common;
+using Strategy.Dive.Final.Navigators;
+using Strategy.Dive.Final.Navigators.Interfaces;
 
 namespace Strategy.Dive.Final
 {

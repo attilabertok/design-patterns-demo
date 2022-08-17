@@ -1,8 +1,11 @@
 ﻿using System.Collections.Immutable;
-using Strategy.Dive.Common;
-using Strategy.Dive.Final.RoutingStrategies;
 
-namespace Strategy.Dive.Final;
+using Strategy.Dive.Common;
+using Strategy.Dive.Final.Navigators.Interfaces;
+using Strategy.Dive.Final.RoutingStrategies;
+using Strategy.Dive.Final.RoutingStrategies.Interfaces;
+
+namespace Strategy.Dive.Final.Navigators;
 
 public class LazyDictionaryNavigator : INavigator
 {

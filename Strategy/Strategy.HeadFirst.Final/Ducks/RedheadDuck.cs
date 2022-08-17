@@ -10,6 +10,7 @@ public class RedheadDuck : DuckBase
         : base(new QuackBehavior(), new FlyBehavior())
     {
     }
+
     public override string Display()
     {
         return "Looking like a pretty redhead...";

@@ -1,7 +1,9 @@
 ﻿using Strategy.Dive.Common;
+using Strategy.Dive.Final.Navigators.Interfaces;
 using Strategy.Dive.Final.RoutingStrategies;
+using Strategy.Dive.Final.RoutingStrategies.Interfaces;
 
-namespace Strategy.Dive.Final;
+namespace Strategy.Dive.Final.Navigators;
 
 public class Navigator : INavigator
 {

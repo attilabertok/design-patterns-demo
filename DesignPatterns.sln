@@ -35,13 +35,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.Dive.Common", "Str
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.Dive.Final", "Strategy\Strategy.Dive.Final\Strategy.Dive.Final.csproj", "{46215A08-3DEA-4B7A-9FB2-808955BD4D5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.Ican.Static", "Strategy\Strategy.Ican.Static\Strategy.Ican.Static.csproj", "{099AF3BB-A02C-4377-B4AD-15D90B94F838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.Ican.Static", "Strategy\Strategy.Ican.Static\Strategy.Ican.Static.csproj", "{099AF3BB-A02C-4377-B4AD-15D90B94F838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.Ican.Dynamic", "Strategy\Strategy.Ican.Dynamic\Strategy.Ican.Dynamic.csproj", "{FB7FEEFC-A3F3-4149-B151-FF811CEFD4D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.Ican.Dynamic", "Strategy\Strategy.Ican.Dynamic\Strategy.Ican.Dynamic.csproj", "{FB7FEEFC-A3F3-4149-B151-FF811CEFD4D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.Ican.Common", "Strategy\Strategy.Ican.Common\Strategy.Ican.Common.csproj", "{5D494957-B6BD-4D5F-8464-C64D71EA4800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.Ican.Common", "Strategy\Strategy.Ican.Common\Strategy.Ican.Common.csproj", "{5D494957-B6BD-4D5F-8464-C64D71EA4800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.Ican.EqualityAndComparison", "Strategy\Strategy.Ican.EqualityAndComparison\Strategy.Ican.EqualityAndComparison.csproj", "{330B8140-B1D4-439E-9767-918E9DF91FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.Ican.EqualityAndComparison", "Strategy\Strategy.Ican.EqualityAndComparison\Strategy.Ican.EqualityAndComparison.csproj", "{330B8140-B1D4-439E-9767-918E9DF91FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy.Ican.Discriminant", "Strategy\Strategy.Ican.Discriminant\Strategy.Ican.Discriminant.csproj", "{05B75684-4D2E-4974-A10F-379A26FF1A96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{330B8140-B1D4-439E-9767-918E9DF91FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{330B8140-B1D4-439E-9767-918E9DF91FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{330B8140-B1D4-439E-9767-918E9DF91FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B75684-4D2E-4974-A10F-379A26FF1A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B75684-4D2E-4974-A10F-379A26FF1A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B75684-4D2E-4974-A10F-379A26FF1A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B75684-4D2E-4974-A10F-379A26FF1A96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +120,7 @@ Global
 		{FB7FEEFC-A3F3-4149-B151-FF811CEFD4D2} = {29545293-140E-415F-AAFB-E79083E52544}
 		{5D494957-B6BD-4D5F-8464-C64D71EA4800} = {29545293-140E-415F-AAFB-E79083E52544}
 		{330B8140-B1D4-439E-9767-918E9DF91FCE} = {29545293-140E-415F-AAFB-E79083E52544}
+		{05B75684-4D2E-4974-A10F-379A26FF1A96} = {29545293-140E-415F-AAFB-E79083E52544}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}

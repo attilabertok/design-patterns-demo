@@ -12,6 +12,7 @@
             {
                 Console.WriteLine(person);
             }
+
             Console.WriteLine();
 
             Console.WriteLine("==== People ordered by date of birth ====");

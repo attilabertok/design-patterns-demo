@@ -1,6 +1,6 @@
 ﻿using Strategy.Dive.Common;
 
-namespace Strategy.Dive.Final;
+namespace Strategy.Dive.Final.Navigators.Interfaces;
 
 public interface INavigator
 {

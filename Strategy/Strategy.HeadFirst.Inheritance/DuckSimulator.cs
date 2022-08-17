@@ -23,6 +23,16 @@ namespace Strategy.HeadFirst.Inheritance
             }
         }
 
+        public static string QuackFallback()
+        {
+            return "<< Silence... >>";
+        }
+
+        public static string FlyFallback()
+        {
+            return "Falling like a rock.";
+        }
+
         private static void DoDuckThings(DuckBase duck)
         {
             DuckExtensions.Describe(duck.GetType().Name, duck.Display);
@@ -42,16 +52,6 @@ namespace Strategy.HeadFirst.Inheritance
                 : FlyFallback;
             DuckExtensions.Describe(duck.GetType().Name, flyMethod);
             Console.WriteLine();
-        }
-
-        public static string QuackFallback()
-        {
-            return "<< Silence... >>";
-        }
-
-        public static string FlyFallback()
-        {
-            return "Falling like a rock.";
         }
     }
 }

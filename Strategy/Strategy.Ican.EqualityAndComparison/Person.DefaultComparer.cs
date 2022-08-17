@@ -2,6 +2,36 @@
 
 public partial class Person
 {
+    public static bool operator <(Person? left, Person? right)
+    {
+        return Comparer<Person>.Default.Compare(left, right) < 0;
+    }
+
+    public static bool operator >(Person? left, Person? right)
+    {
+        return Comparer<Person>.Default.Compare(left, right) > 0;
+    }
+
+    public static bool operator <=(Person? left, Person? right)
+    {
+        return Comparer<Person>.Default.Compare(left, right) <= 0;
+    }
+
+    public static bool operator >=(Person? left, Person? right)
+    {
+        return Comparer<Person>.Default.Compare(left, right) >= 0;
+    }
+
+    public static bool operator ==(Person? left, Person? right)
+    {
+        return Equals(left, right);
+    }
+
+    public static bool operator !=(Person? left, Person? right)
+    {
+        return !Equals(left, right);
+    }
+
     public int CompareTo(Person? other)
     {
         if (ReferenceEquals(this, other))
@@ -34,26 +64,6 @@ public partial class Person
             : throw new ArgumentException($"Object must be of type {nameof(Person)}");
     }
 
-    public static bool operator <(Person? left, Person? right)
-    {
-        return Comparer<Person>.Default.Compare(left, right) < 0;
-    }
-
-    public static bool operator >(Person? left, Person? right)
-    {
-        return Comparer<Person>.Default.Compare(left, right) > 0;
-    }
-
-    public static bool operator <=(Person? left, Person? right)
-    {
-        return Comparer<Person>.Default.Compare(left, right) <= 0;
-    }
-
-    public static bool operator >=(Person? left, Person? right)
-    {
-        return Comparer<Person>.Default.Compare(left, right) >= 0;
-    }
-
     public bool Equals(Person? other)
     {
         if (other is null)
@@ -78,15 +88,5 @@ public partial class Person
     public override int GetHashCode()
     {
         return Id.GetHashCode();
-    }
-
-    public static bool operator ==(Person? left, Person? right)
-    {
-        return Equals(left, right);
-    }
-
-    public static bool operator !=(Person? left, Person? right)
-    {
-        return !Equals(left, right);
     }
 }

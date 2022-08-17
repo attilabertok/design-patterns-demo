@@ -1,4 +1,5 @@
 ﻿using System.Text;
+
 using Strategy.Ican.Common.ListFormattingStrategies.Interface;
 
 namespace Strategy.Ican.Common.ListFormattingStrategies;

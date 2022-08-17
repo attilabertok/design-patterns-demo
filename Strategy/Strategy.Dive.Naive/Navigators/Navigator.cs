@@ -1,7 +1,8 @@
 ﻿using System.Collections.Immutable;
+
 using Strategy.Dive.Common;
 
-namespace Strategy.Dive.Naive;
+namespace Strategy.Dive.Naive.Navigators;
 
 public static class Navigator
 {
