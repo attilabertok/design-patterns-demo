@@ -1,1 +1,1 @@
-Strategy is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from the clients that use it.
+Observer is a behavioral design pattern that defines a one-to-many dependency between objects so that when the state of one object changes state, all of its dependents are notified an updated automatically.
