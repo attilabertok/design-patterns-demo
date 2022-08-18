@@ -10,7 +10,7 @@ public class Forecast : IWeatherDisplay
     public void Update(double temperature, double humidity, double pressure)
     {
         var forecast = "Unknown";
-        if (previousPressure is not 0)
+        if (Math.Abs(previousPressure) > 0.1d)
         {
             var pressureDifference = BarometricPressureChange.FromPressureDifference(pressure, previousPressure);
 

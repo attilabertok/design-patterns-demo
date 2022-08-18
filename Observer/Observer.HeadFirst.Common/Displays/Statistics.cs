@@ -10,9 +10,20 @@ public class Statistics : IWeatherDisplay
 
     public void Update(double temperature, double humidity, double pressure)
     {
-        temperatureValues.Add(temperature);
-        humidityValues.Add(humidity);
-        pressureValues.Add((pressure / 100) + 29.7);
+        if (Math.Abs(temperatureValues.LastOrDefault() - temperature) > 0.1d)
+        {
+            temperatureValues.Add(temperature);
+        }
+
+        if (Math.Abs(humidityValues.LastOrDefault() - humidity) > 0.1d)
+        {
+            humidityValues.Add(humidity);
+        }
+
+        if (Math.Abs(pressureValues.LastOrDefault() - (pressure / 100) + 29.7) > 0.1d)
+        {
+            pressureValues.Add((pressure / 100) + 29.7);
+        }
 
         Console.WriteLine("==== Temperature statistics ====");
         DisplayData(temperatureValues, "F1");
@@ -29,8 +40,8 @@ public class Statistics : IWeatherDisplay
 
     private static void DisplayData(IReadOnlyCollection<double> values, string format)
     {
-        Console.WriteLine($"All-time low: {values.Min().ToString(format)}");
-        Console.WriteLine($"All-time high: {values.Max().ToString(format)}");
-        Console.WriteLine($"Average: {values.Average().ToString(format)}");
+        Console.WriteLine($"All-time low: {(values.Any() ? values.Min() : 0).ToString(format)}");
+        Console.WriteLine($"All-time high: {(values.Any() ? values.Max() :0).ToString(format)}");
+        Console.WriteLine($"Average: {(values.Any() ? values.Average() : 0).ToString(format)}");
     }
 }
