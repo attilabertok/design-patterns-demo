@@ -17,6 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC31917A-B86C-4B91-A6CD-A7202961713F}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.filenesting.json = .filenesting.json
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
 		README.md = README.md
@@ -52,7 +53,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Observer", "Observer", "{A2
 		Strategy\readme.md = Strategy\readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer.HeadFirst.Common", "Observer\Observer.HeadFirst.Common\Observer.HeadFirst.Common.csproj", "{5CE4B2B5-3FAE-4AC2-A533-F434C53A9408}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.HeadFirst.Common", "Observer\Observer.HeadFirst.Common\Observer.HeadFirst.Common.csproj", "{5CE4B2B5-3FAE-4AC2-A533-F434C53A9408}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
