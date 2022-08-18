@@ -13,6 +13,8 @@ public class WeatherData : WeatherDataBase
         new CurrentConditions(),
         new Statistics(),
         new Forecast(),
+
+        // need to add all new items here
         new HeatIndex()
     }.ToImmutableList();
 
