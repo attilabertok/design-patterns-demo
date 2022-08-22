@@ -1,4 +1,5 @@
 ﻿using Strategy.Ican.Common.Formatting;
+using Strategy.Ican.Dynamic.TextProcessing;
 
 namespace Strategy.Ican.Dynamic
 {

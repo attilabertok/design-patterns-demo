@@ -1,6 +1,8 @@
-﻿namespace Observer.HeadFirst.Common.Displays.Interfaces;
+﻿using Observer.HeadFirst.Common.Messages;
+
+namespace Observer.HeadFirst.Common.Displays.Interfaces;
 
 public interface IWeatherDisplay
 {
-    void Update(double temperature, double humidity, double pressure);
+    void Update(WeatherChangeMessage message);
 }

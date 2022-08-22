@@ -1,4 +1,5 @@
-﻿using Observer.HeadFirst.Common.WeatherStation;
+﻿using Observer.HeadFirst.Common.Messages;
+using Observer.HeadFirst.Common.WeatherStation;
 using Observer.HeadFirst.SelfImplemented.Infrastructure;
 
 namespace Observer.HeadFirst.SelfImplemented;
@@ -31,7 +32,7 @@ public class WeatherData :
     {
         foreach (var observer in observers)
         {
-            observer.Update(Temperature, Humidity, Pressure);
+            observer.Update(new WeatherChangeMessage(Temperature, Humidity, Pressure));
         }
     }
 }

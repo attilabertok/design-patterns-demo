@@ -1,4 +1,5 @@
 ﻿using Observer.HeadFirst.Common.Displays.Interfaces;
+using Observer.HeadFirst.Common.Messages;
 
 namespace Observer.HeadFirst.Common.Displays;
 
@@ -8,21 +9,21 @@ public class Statistics : IWeatherDisplay
     private readonly List<double> humidityValues = new();
     private readonly List<double> pressureValues = new();
 
-    public void Update(double temperature, double humidity, double pressure)
+    public void Update(WeatherChangeMessage message)
     {
-        if (Math.Abs(temperatureValues.LastOrDefault() - temperature) > 0.1d)
+        if (Math.Abs(temperatureValues.LastOrDefault() - message.Temperature) > 0.1d)
         {
-            temperatureValues.Add(temperature);
+            temperatureValues.Add(message.Temperature);
         }
 
-        if (Math.Abs(humidityValues.LastOrDefault() - humidity) > 0.1d)
+        if (Math.Abs(humidityValues.LastOrDefault() - message.Humidity) > 0.1d)
         {
-            humidityValues.Add(humidity);
+            humidityValues.Add(message.Humidity);
         }
 
-        if (Math.Abs(pressureValues.LastOrDefault() - (pressure / 100) + 29.7) > 0.1d)
+        if (Math.Abs(pressureValues.LastOrDefault() - (message.Pressure / 100) + 29.7) > 0.1d)
         {
-            pressureValues.Add((pressure / 100) + 29.7);
+            pressureValues.Add((message.Pressure / 100) + 29.7);
         }
 
         Console.WriteLine("==== Temperature statistics ====");

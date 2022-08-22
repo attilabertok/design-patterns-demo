@@ -1,4 +1,5 @@
 ﻿using Strategy.Ican.Common.ListFormattingStrategies;
+using Strategy.Ican.Static.TextProcessing;
 
 namespace Strategy.Ican.Static;
 

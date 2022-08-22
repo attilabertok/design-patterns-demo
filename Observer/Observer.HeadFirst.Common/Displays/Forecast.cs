@@ -1,4 +1,5 @@
 ﻿using Observer.HeadFirst.Common.Displays.Interfaces;
+using Observer.HeadFirst.Common.Messages;
 using Observer.HeadFirst.Common.WeatherStation;
 
 namespace Observer.HeadFirst.Common.Displays;
@@ -7,21 +8,21 @@ public class Forecast : IWeatherDisplay
 {
     private double previousPressure;
 
-    public void Update(double temperature, double humidity, double pressure)
+    public void Update(WeatherChangeMessage message)
     {
         var forecast = "Unknown";
         if (Math.Abs(previousPressure) > 0.1d)
         {
-            var pressureDifference = BarometricPressureChange.FromPressureDifference(pressure, previousPressure);
+            var pressureDifference = BarometricPressureChange.FromPressureDifference(message.Pressure, previousPressure);
 
-            forecast = CalculateForecast(BarometricPressure.FromValue(pressure), pressureDifference);
+            forecast = CalculateForecast(BarometricPressure.FromValue(message.Pressure), pressureDifference);
         }
 
         Console.WriteLine("==== Forecast for the next 12 to 24 hours: ====");
         Console.WriteLine(forecast);
         Console.WriteLine();
 
-        previousPressure = pressure;
+        previousPressure = message.Pressure;
     }
 
     private static string CalculateForecast(BarometricPressure pressure, BarometricPressureChange pressureDifference)
