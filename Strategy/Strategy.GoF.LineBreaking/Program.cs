@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+
 using Strategy.GoF.LineBreaking.Compositors;
 using Strategy.GoF.LineBreaking.Entities;
 using Strategy.GoF.LineBreaking.Factories;
@@ -25,7 +26,7 @@ namespace Strategy.GoF.LineBreaking
             foreach (var strategy in strategies)
             {
                 Console.WriteLine($"==== {strategy.Key} strategy ====");
-                var lineBreaks = strategy.Value.Repair(document, targetLineWidth); 
+                var lineBreaks = strategy.Value.Repair(document, targetLineWidth);
                 DisplayResult(document, lineBreaks);
                 Console.WriteLine();
             }
