@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Infrastructure\" />
+    <Folder Include="Timekeeping\Clocks\" />
   </ItemGroup>
 
   <ItemGroup>
