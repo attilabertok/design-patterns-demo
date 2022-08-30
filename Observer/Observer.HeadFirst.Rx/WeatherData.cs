@@ -1,4 +1,5 @@
 ﻿using System.Reactive.Subjects;
+
 using Observer.HeadFirst.Common.Messages;
 using Observer.HeadFirst.Common.WeatherStation;
 

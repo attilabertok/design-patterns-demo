@@ -42,7 +42,7 @@ public class Statistics : IWeatherDisplay
     private static void DisplayData(IReadOnlyCollection<double> values, string format)
     {
         Console.WriteLine($"All-time low: {(values.Any() ? values.Min() : 0).ToString(format)}");
-        Console.WriteLine($"All-time high: {(values.Any() ? values.Max() :0).ToString(format)}");
+        Console.WriteLine($"All-time high: {(values.Any() ? values.Max() : 0).ToString(format)}");
         Console.WriteLine($"Average: {(values.Any() ? values.Average() : 0).ToString(format)}");
     }
 }

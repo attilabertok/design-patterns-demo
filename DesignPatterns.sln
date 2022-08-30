@@ -70,6 +70,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.GoF.Clock", "Obser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer.Ican.Events", "Observer\Observer.Ican.Events\Observer.Ican.Events.csproj", "{05E2488C-0AB4-473B-AB0D-865000C90173}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer.Ican.WeakEventPattern", "Observer\Observer.Ican.WeakEventPattern\Observer.Ican.WeakEventPattern.csproj", "{C4F65AF0-6718-4206-945B-C9D698C7A04F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -164,6 +166,10 @@ Global
 		{05E2488C-0AB4-473B-AB0D-865000C90173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E2488C-0AB4-473B-AB0D-865000C90173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E2488C-0AB4-473B-AB0D-865000C90173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F65AF0-6718-4206-945B-C9D698C7A04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F65AF0-6718-4206-945B-C9D698C7A04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F65AF0-6718-4206-945B-C9D698C7A04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F65AF0-6718-4206-945B-C9D698C7A04F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +197,7 @@ Global
 		{220CE723-9F47-45FD-A67D-4D07A1B64FF9} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
 		{F80D3338-641F-41D6-9FAC-9B5BEEA6B05F} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
 		{05E2488C-0AB4-473B-AB0D-865000C90173} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
+		{C4F65AF0-6718-4206-945B-C9D698C7A04F} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}
