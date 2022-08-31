@@ -1,13 +1,22 @@
-﻿namespace Observer.Ican.Events
+﻿using Observer.Ican.Events.People;
+using Observer.Ican.Events.People.Factories;
+
+namespace Observer.Ican.Events
 {
     public static class Program
     {
         public static void Main()
         {
-            var john = new Person("John");
-            john.FallsAsleep += LogGoingToSleep;
+            var people = PersonFactory.Create(3).ToList();
+            foreach (var person in people)
+            {
+                person.FallsAsleep += LogGoingToSleep;
+            }
 
-            john.GoToBed();
+            foreach (var person in people)
+            {
+                person.GoToBed();
+            }
 
             Console.ReadLine();
         }

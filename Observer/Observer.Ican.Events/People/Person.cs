@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-namespace Observer.Ican.Events;
+namespace Observer.Ican.Events.People;
 
 public class Person
 {
