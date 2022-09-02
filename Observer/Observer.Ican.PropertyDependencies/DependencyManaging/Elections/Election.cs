@@ -1,6 +1,6 @@
-﻿using Observer.Ican.PropertyDependencies.Infrastructure.Models;
+﻿using Observer.Ican.PropertyDependencies.DependencyManaging.Infrastructure.Models;
 
-namespace Observer.Ican.PropertyDependencies.Elections;
+namespace Observer.Ican.PropertyDependencies.DependencyManaging.Elections;
 
 public class Election
     : ModelBase

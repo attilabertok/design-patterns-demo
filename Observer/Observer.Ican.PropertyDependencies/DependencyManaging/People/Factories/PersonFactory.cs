@@ -1,8 +1,7 @@
 ﻿using Bogus;
+using Observer.Ican.PropertyDependencies.CommonInfrastructure;
 
-using Observer.Ican.PropertyDependencies.Elections;
-
-namespace Observer.Ican.PropertyDependencies.People.Naive.Factories;
+namespace Observer.Ican.PropertyDependencies.DependencyManaging.People.Factories;
 
 public class PersonFactory
 {

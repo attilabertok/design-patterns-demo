@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Observer.Ican.PropertyDependencies.Infrastructure;
+namespace Observer.Ican.PropertyDependencies.Naive.Infrastructure;
 
-public abstract class NotificationBase :
+public abstract class NaiveNotificationBase :
     INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -17,7 +17,7 @@ public abstract class NotificationBase :
     {
         if (EqualityComparer<T>.Default.Equals(field, value))
         {
-            Console.WriteLine($"{GetType()}:");
+            Console.WriteLine($"{GetType().Name}:");
             Console.WriteLine($">> Change of '{propertyName}'to the same value ('{value}') discarded");
 
             return false;
@@ -26,7 +26,7 @@ public abstract class NotificationBase :
         field = value;
         OnPropertyChanged(propertyName);
 
-        Console.WriteLine($"{GetType()}:");
+        Console.WriteLine($"{GetType().Name}:");
         Console.WriteLine($">> '{propertyName}' is now '{value}'");
 
         return true;

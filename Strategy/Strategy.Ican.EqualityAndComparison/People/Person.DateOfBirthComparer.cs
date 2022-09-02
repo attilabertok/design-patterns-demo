@@ -1,4 +1,4 @@
-﻿namespace Strategy.Ican.EqualityAndComparison;
+﻿namespace Strategy.Ican.EqualityAndComparison.People;
 
 public partial class Person
 {

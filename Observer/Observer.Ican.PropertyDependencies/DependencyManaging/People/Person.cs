@@ -1,6 +1,6 @@
-﻿using Observer.Ican.PropertyDependencies.Infrastructure.Models;
+﻿using Observer.Ican.PropertyDependencies.DependencyManaging.Infrastructure.Models;
 
-namespace Observer.Ican.PropertyDependencies.People.Naive;
+namespace Observer.Ican.PropertyDependencies.DependencyManaging.People;
 
 public class Person :
     ModelBase

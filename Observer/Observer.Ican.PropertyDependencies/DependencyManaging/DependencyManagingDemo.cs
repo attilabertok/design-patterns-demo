@@ -1,14 +1,12 @@
 ﻿using Bogus;
+using Observer.Ican.PropertyDependencies.CommonInfrastructure;
+using Observer.Ican.PropertyDependencies.DependencyManaging.Elections;
+using Observer.Ican.PropertyDependencies.DependencyManaging.Elections.Factories;
+using Observer.Ican.PropertyDependencies.DependencyManaging.People.Factories;
 
-using Observer.Ican.PropertyDependencies.Elections.Factories;
-using Observer.Ican.PropertyDependencies.Elections.Naive;
-using Observer.Ican.PropertyDependencies.People.Naive.Factories;
+namespace Observer.Ican.PropertyDependencies.DependencyManaging;
 
-using Person = Observer.Ican.PropertyDependencies.People.Naive.Person;
-
-namespace Observer.Ican.PropertyDependencies.Elections;
-
-public class NaiveDemo
+public class DependencyManagingDemo
 {
     public static void Execute()
     {
@@ -20,9 +18,13 @@ public class NaiveDemo
 
         var eligiblePerson = PersonFactory.CreateAdult(election.Date, country);
 
-        var electionViewModel = new NaiveElectionViewModel(election)
+        var electionViewModel = new DependencyManagingElectionViewModel(election)
         {
             Voter = eligiblePerson
+        };
+        electionViewModel.PropertyChanged += (_, args) =>
+        {
+            Console.WriteLine($"Property {args.PropertyName} changed");
         };
         electionViewModel.PrintData();
         Console.WriteLine();

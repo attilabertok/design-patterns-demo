@@ -1,10 +1,11 @@
-﻿using Observer.Ican.PropertyDependencies.Infrastructure.ViewModels;
-using Observer.Ican.PropertyDependencies.People.Naive;
+﻿using Observer.Ican.PropertyDependencies.CommonInfrastructure;
+using Observer.Ican.PropertyDependencies.Naive.Infrastructure.ViewModels;
+using Observer.Ican.PropertyDependencies.Naive.People;
 
-namespace Observer.Ican.PropertyDependencies.Elections.Naive;
+namespace Observer.Ican.PropertyDependencies.Naive.Elections;
 
 public class NaiveElectionViewModel
-    : ViewModelBase
+    : NaiveViewModelBase
 {
     private string country;
     private DateOnly date;
@@ -102,8 +103,8 @@ public class NaiveElectionViewModel
     public void PrintData()
     {
         Console.WriteLine($"{Voter!.Name} is a citizen of {Voter!.Nationality}, born on {Voter!.DateOfBirth}.");
-        Console.WriteLine($"On election day, {Voter!.Name} is {VoterAge} years old, and is {(IsCitizen ? string.Empty : "not")} a citizen of {Country}");
-        Console.WriteLine($"Based on this data, {Voter!.Name} can {(IsVoterEligibleToVote ? string.Empty : "not")} vote during the elections.");
+        Console.WriteLine($"On election day, {Voter!.Name} is {VoterAge} years old, and is {(IsCitizen ? string.Empty : "not ")}a citizen of {Country}");
+        Console.WriteLine($"Based on this data, {Voter!.Name} can {(IsVoterEligibleToVote ? string.Empty : "not ")}vote during the elections.");
     }
 
     private bool IsOverVotingAge()

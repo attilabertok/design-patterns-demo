@@ -15,11 +15,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Elections\Naive\" />
-    <Folder Include="Elections\Factories\" />
-    <Folder Include="Infrastructure\Models\" />
-    <Folder Include="Infrastructure\ViewModels\" />
-  </ItemGroup>
-
 </Project>

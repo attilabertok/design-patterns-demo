@@ -1,4 +1,4 @@
-﻿namespace Observer.Ican.PropertyDependencies.Elections;
+﻿namespace Observer.Ican.PropertyDependencies.CommonInfrastructure;
 
 public static class Voting
 {

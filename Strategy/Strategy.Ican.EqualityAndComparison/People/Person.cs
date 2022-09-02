@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 
-namespace Strategy.Ican.EqualityAndComparison;
+namespace Strategy.Ican.EqualityAndComparison.People;
 
 public partial class Person :
     IEquatable<Person>,

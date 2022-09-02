@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-namespace Observer.Ican.PropertyDependencies.Elections.Factories;
+namespace Observer.Ican.PropertyDependencies.Naive.Elections.Factories;
 
 public static class ElectionFactory
 {

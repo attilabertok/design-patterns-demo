@@ -1,4 +1,5 @@
-﻿using Strategy.Ican.EqualityAndComparison.People.Factories;
+﻿using Strategy.Ican.EqualityAndComparison.People;
+using Strategy.Ican.EqualityAndComparison.People.Factories;
 
 namespace Strategy.Ican.EqualityAndComparison
 {
