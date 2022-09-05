@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy.GoF.LineBreaking",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Observer", "Observer", "{A2990930-7E5B-44EA-A642-15DF50CE75A4}"
 	ProjectSection(SolutionItems) = preProject
-		Strategy\readme.md = Strategy\readme.md
+		Observer\readme.md = Observer\readme.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.HeadFirst.Naive", "Observer\Observer.HeadFirst.Naive\Observer.HeadFirst.Naive.csproj", "{22257E86-EC37-4F6F-B1BA-9E3F5757AE48}"
@@ -78,9 +78,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.Ican.Bidirectional
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.Ican.PropertyDependencies", "Observer\Observer.Ican.PropertyDependencies\Observer.Ican.PropertyDependencies.csproj", "{CB40F8C1-2452-4003-996C-C31251CE4487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer.Ican.AutoPubSub", "Observer\Observer.Ican.AutoPubSub\Observer.Ican.AutoPubSub.csproj", "{CACB2CF9-6CB3-4980-B169-E84997526A94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.Ican.AutoPubSub", "Observer\Observer.Ican.AutoPubSub\Observer.Ican.AutoPubSub.csproj", "{CACB2CF9-6CB3-4980-B169-E84997526A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer.Ican.RatGame", "Observer\Observer.Ican.RatGame\Observer.Ican.RatGame.csproj", "{D7DF6B67-652E-4901-A98C-BA744612E773}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer.Ican.RatGame", "Observer\Observer.Ican.RatGame\Observer.Ican.RatGame.csproj", "{D7DF6B67-652E-4901-A98C-BA744612E773}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Decorator", "Decorator", "{41444808-B9C8-4615-9F2D-B0140D5E2587}"
+	ProjectSection(SolutionItems) = preProject
+		Decorator\readme.md = Decorator\readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.HeadFirst.Naive.Inheritance", "Decorator\Decorator.HeadFirst.Naive.Inheritance\Decorator.HeadFirst.Naive.Inheritance.csproj", "{F7617100-55E3-4B3B-877D-AE1648AA8E18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -200,6 +207,10 @@ Global
 		{D7DF6B67-652E-4901-A98C-BA744612E773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7DF6B67-652E-4901-A98C-BA744612E773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7DF6B67-652E-4901-A98C-BA744612E773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7617100-55E3-4B3B-877D-AE1648AA8E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7617100-55E3-4B3B-877D-AE1648AA8E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7617100-55E3-4B3B-877D-AE1648AA8E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7617100-55E3-4B3B-877D-AE1648AA8E18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -233,6 +244,7 @@ Global
 		{CB40F8C1-2452-4003-996C-C31251CE4487} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
 		{CACB2CF9-6CB3-4980-B169-E84997526A94} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
 		{D7DF6B67-652E-4901-A98C-BA744612E773} = {A2990930-7E5B-44EA-A642-15DF50CE75A4}
+		{F7617100-55E3-4B3B-877D-AE1648AA8E18} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}
