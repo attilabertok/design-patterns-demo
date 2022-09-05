@@ -12,10 +12,12 @@ namespace Observer.Ican.AutoPubSub
     {
         public static void Main()
         {
+            // TODO: other DI frameworks lack support for some of these features, this cannot be done in e.g. Microsoft netCore DI
             var builder = new ContainerBuilder();
 
             var assembly = typeof(Program).Assembly;
 
+            // TODO: singleInstance is not a reasonable limitation
             builder.RegisterAssemblyTypes(assembly)
                 .AsClosedTypesOf(typeof(ISend<>))
                 .SingleInstance();
@@ -32,6 +34,8 @@ namespace Observer.Ican.AutoPubSub
                         var senderType = typeof(ISend<>).MakeGenericType(argumentType);
                         var allSendersTypes = typeof(IEnumerable<>)
                             .MakeGenericType(senderType);
+
+                        // TODO: only parameterless constructors work here
                         var allSenders = (IEnumerable)act.Context.Resolve(allSendersTypes);
                         foreach (var sender in allSenders)
                         {
@@ -41,6 +45,8 @@ namespace Observer.Ican.AutoPubSub
                             foreach (var eventInfo in messages)
                             {
                                 var eventInfoTypeParameter = eventInfo.EventHandlerType!.GetGenericArguments()[0];
+
+                                // TODO: string filter is ugly, but getting the name of a Handle method of an open generic is difficult
                                 var handleMethods = instanceType.GetMethods().Where(m => m.Name == "Handle");
                                 var handleMethod = handleMethods.First(m => m.GetParameters()[1].ParameterType == eventInfoTypeParameter);
                                 var handler = Delegate.CreateDelegate(eventInfo.EventHandlerType, null, handleMethod);
