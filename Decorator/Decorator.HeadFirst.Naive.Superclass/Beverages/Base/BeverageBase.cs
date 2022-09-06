@@ -1,4 +1,5 @@
 ﻿using System.Text;
+
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Condiments;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
@@ -57,22 +58,22 @@ public abstract class BeverageBase
 
         if (HasMocha)
         {
-            condimentCost += CondimentCost.Mocha;
+            condimentCost += CondimentData.Mocha.Cost;
         }
 
         if (HasSoy)
         {
-            condimentCost += CondimentCost.Soy;
+            condimentCost += CondimentData.Soy.Cost;
         }
 
         if (HasSteamedMilk)
         {
-            condimentCost += CondimentCost.SteamedMilk;
+            condimentCost += CondimentData.SteamedMilk.Cost;
         }
 
         if (HasWhip)
         {
-            condimentCost += CondimentCost.Whip;
+            condimentCost += CondimentData.Whip.Cost;
         }
 
         return condimentCost;
@@ -82,7 +83,7 @@ public abstract class BeverageBase
     {
         if (HasSteamedMilk)
         {
-            result.Append(" Steamed Milk");
+            result.Append($" {CondimentData.SteamedMilk.Description}");
             describedCondimentCount++;
             AddContinuation(result, describedCondimentCount);
         }
@@ -92,7 +93,7 @@ public abstract class BeverageBase
     {
         if (HasMocha)
         {
-            result.Append(" Mocha");
+            result.Append($" {CondimentData.Mocha.Description}");
             describedCondimentCount++;
             AddContinuation(result, describedCondimentCount);
         }
@@ -102,7 +103,7 @@ public abstract class BeverageBase
     {
         if (HasSoy)
         {
-            result.Append(" Soy");
+            result.Append($" {CondimentData.Soy.Description}");
             describedCondimentCount++;
             AddContinuation(result, describedCondimentCount);
         }
@@ -112,7 +113,7 @@ public abstract class BeverageBase
     {
         if (HasWhip)
         {
-            result.Append(" Whip");
+            result.Append($" {CondimentData.Whip.Description}");
             describedCondimentCount++;
             AddContinuation(result, describedCondimentCount);
         }

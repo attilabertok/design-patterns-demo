@@ -23,4 +23,12 @@ public class SelectionOptions
     public static int DarkRoastWithMocha => 9;
 
     public static int DarkRoastWithSteamedMilkAndMocha => 10;
+
+    public static int Mocha => 11;
+
+    public static int Whip => 12;
+
+    public static int Soy => 13;
+
+    public static int SteamedMilk => 14;
 }

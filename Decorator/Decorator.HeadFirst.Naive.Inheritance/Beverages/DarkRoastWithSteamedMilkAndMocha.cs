@@ -8,11 +8,11 @@ public class DarkRoastWithSteamedMilkAndMocha :
 {
     public DarkRoastWithSteamedMilkAndMocha()
     {
-        Description += " with Steamed Milk and Mocha";
+        Description += $" with {CondimentData.SteamedMilk.Description} and {CondimentData.Mocha.Description}";
     }
 
     public override decimal CalculateCost()
     {
-        return base.CalculateCost() + CondimentCost.SteamedMilk + CondimentCost.Mocha;
+        return base.CalculateCost() + CondimentData.SteamedMilk.Cost + CondimentData.Mocha.Cost;
     }
 }

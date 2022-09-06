@@ -8,11 +8,11 @@ public class DarkRoastWithMocha :
 {
     public DarkRoastWithMocha()
     {
-        Description += " with Mocha";
+        Description += $" with {CondimentData.Mocha.Description}";
     }
 
     public override decimal CalculateCost()
     {
-        return base.CalculateCost() + CondimentCost.Mocha;
+        return base.CalculateCost() + CondimentData.Mocha.Cost;
     }
 }

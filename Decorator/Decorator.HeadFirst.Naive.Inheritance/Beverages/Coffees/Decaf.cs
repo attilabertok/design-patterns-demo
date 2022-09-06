@@ -1,20 +1,18 @@
 ﻿using Decorator.HeadFirst.Naive.Inheritance.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Coffees;
 
 namespace Decorator.HeadFirst.Naive.Inheritance.Beverages.Coffees;
 
 public class Decaf :
     BeverageBase
 {
-    private const decimal BaseCost = 1.05m;
-    private const string BaseDescription = "Coffee, but without the ooomph";
-
     public Decaf()
     {
-        Description = BaseDescription;
+        Description = CoffeeData.Decaf.Description;
     }
 
     public override decimal CalculateCost()
     {
-        return BaseCost;
+        return CoffeeData.Decaf.BaseCost;
     }
 }

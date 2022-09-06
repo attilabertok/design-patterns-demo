@@ -1,20 +1,18 @@
 ﻿using Decorator.HeadFirst.Naive.Inheritance.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Coffees;
 
 namespace Decorator.HeadFirst.Naive.Inheritance.Beverages.Coffees;
 
 public class Espresso :
     BeverageBase
 {
-    private const decimal BaseCost = 1.99m;
-    private const string BaseDescription = "Espresso";
-
     public Espresso()
     {
-        Description = BaseDescription;
+        Description = CoffeeData.Espresso.Description;
     }
 
     public override decimal CalculateCost()
     {
-        return BaseCost;
+        return CoffeeData.Espresso.BaseCost;
     }
 }

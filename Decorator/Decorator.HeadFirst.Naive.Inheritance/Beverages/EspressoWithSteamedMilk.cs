@@ -8,11 +8,11 @@ public class EspressoWithSteamedMilk :
 {
     public EspressoWithSteamedMilk()
     {
-        Description += " with Steamed Milk";
+        Description += $" with {CondimentData.SteamedMilk.Description}";
     }
 
     public override decimal CalculateCost()
     {
-        return base.CalculateCost() + CondimentCost.SteamedMilk;
+        return base.CalculateCost() + CondimentData.SteamedMilk.Cost;
     }
 }

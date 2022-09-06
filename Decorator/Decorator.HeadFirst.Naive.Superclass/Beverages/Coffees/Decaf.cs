@@ -1,18 +1,17 @@
 ﻿using Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Coffees;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Coffees;
 
 public class Decaf :
     BeverageBase
 {
-    private const string BaseDescription = "Coffee, but without the ooomph";
-
     public Decaf()
     {
-        Description = BaseDescription;
+        Description = CoffeeData.Decaf.Description;
     }
 
-    protected override decimal BaseCost => 1.05m;
+    protected override decimal BaseCost => CoffeeData.Decaf.BaseCost;
 
     public override decimal CalculateCost()
     {
