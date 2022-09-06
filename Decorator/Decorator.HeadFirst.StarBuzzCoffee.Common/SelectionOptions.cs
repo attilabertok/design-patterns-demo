@@ -1,4 +1,4 @@
-﻿namespace Decorator.HeadFirst.Naive.Inheritance;
+﻿namespace Decorator.HeadFirst.StarBuzzCoffee.Common;
 
 public class SelectionOptions
 {

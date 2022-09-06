@@ -18,4 +18,8 @@
     <Folder Include="Beverages\Base\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Decorator.HeadFirst.StarBuzzCoffee.Common\Decorator.HeadFirst.StarBuzzCoffee.Common.csproj" />
+  </ItemGroup>
+
 </Project>

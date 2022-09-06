@@ -1,4 +1,4 @@
-﻿namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Condiments;
+﻿namespace Decorator.HeadFirst.StarBuzzCoffee.Common.Condiments;
 
 public static class CondimentCost
 {

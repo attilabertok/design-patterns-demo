@@ -17,8 +17,11 @@
   <ItemGroup>
     <Folder Include="Beverages\Base\" />
     <Folder Include="Beverages\Coffees\" />
-    <Folder Include="Beverages\Condiments\" />
     <Folder Include="Beverages\Factories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Decorator.HeadFirst.StarBuzzCoffee.Common\Decorator.HeadFirst.StarBuzzCoffee.Common.csproj" />
   </ItemGroup>
 
 </Project>

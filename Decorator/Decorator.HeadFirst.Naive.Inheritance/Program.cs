@@ -4,6 +4,7 @@ using Decorator.HeadFirst.Naive.Inheritance.Beverages;
 using Decorator.HeadFirst.Naive.Inheritance.Beverages.Base;
 using Decorator.HeadFirst.Naive.Inheritance.Beverages.Coffees;
 using Decorator.HeadFirst.Naive.Inheritance.Beverages.Factories;
+using Decorator.HeadFirst.StarBuzzCoffee.Common;
 
 namespace Decorator.HeadFirst.Naive.Inheritance
 {
