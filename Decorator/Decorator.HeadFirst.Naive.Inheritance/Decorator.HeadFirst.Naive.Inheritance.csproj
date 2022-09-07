@@ -18,6 +18,7 @@
     <Folder Include="Beverages\Base\" />
     <Folder Include="Beverages\Coffees\" />
     <Folder Include="Beverages\Factories\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
   <ItemGroup>

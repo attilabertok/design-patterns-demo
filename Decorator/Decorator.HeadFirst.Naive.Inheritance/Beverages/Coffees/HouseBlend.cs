@@ -1,4 +1,5 @@
 ﻿using Decorator.HeadFirst.Naive.Inheritance.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 
 namespace Decorator.HeadFirst.Naive.Inheritance.Beverages.Coffees;
@@ -8,11 +9,14 @@ public class HouseBlend :
 {
     public HouseBlend()
     {
-        Description = CoffeeData.HouseBlend.Description;
+        CoffeeData = CoffeeData.HouseBlend;
+        Description = CoffeeData.Description;
     }
 
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return CoffeeData.HouseBlend.BaseCost;
+        size ??= Size;
+
+        return CoffeeData?.BaseCost[size] ?? 0;
     }
 }

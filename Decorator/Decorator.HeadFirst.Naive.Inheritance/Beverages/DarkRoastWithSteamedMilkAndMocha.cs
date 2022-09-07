@@ -1,4 +1,5 @@
 ﻿using Decorator.HeadFirst.Naive.Inheritance.Beverages.Coffees;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.Naive.Inheritance.Beverages;
@@ -8,11 +9,19 @@ public class DarkRoastWithSteamedMilkAndMocha :
 {
     public DarkRoastWithSteamedMilkAndMocha()
     {
-        Description += $" with {CondimentData.SteamedMilk.Description} and {CondimentData.Mocha.Description}";
+        Condiments.Add(CondimentData.SteamedMilk);
+        Condiments.Add(CondimentData.Mocha);
+        foreach (var condiment in Condiments)
+        {
+            Description += $" with {condiment.Description}";
+        }
     }
 
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return base.CalculateCost() + CondimentData.SteamedMilk.Cost + CondimentData.Mocha.Cost;
+        size ??= Size;
+        var baseCost = base.CalculateCost(size);
+
+        return baseCost + Condiments.Sum(condiment => condiment.Cost[size]);
     }
 }

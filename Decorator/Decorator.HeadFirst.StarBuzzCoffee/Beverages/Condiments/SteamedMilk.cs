@@ -15,6 +15,6 @@ public class SteamedMilk :
 
     public override decimal CalculateCost()
     {
-        return Beverage.CalculateCost() + CondimentData.SteamedMilk.Cost;
+        return Beverage.CalculateCost() + CondimentData.SteamedMilk.Cost[Size];
     }
 }

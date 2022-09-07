@@ -15,6 +15,6 @@ public class Whip :
 
     public override decimal CalculateCost()
     {
-        return Beverage.CalculateCost() + CondimentData.Whip.Cost;
+        return Beverage.CalculateCost() + CondimentData.Whip.Cost[Size];
     }
 }

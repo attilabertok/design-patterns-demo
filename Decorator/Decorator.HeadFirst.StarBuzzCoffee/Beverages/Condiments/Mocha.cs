@@ -15,6 +15,6 @@ public class Mocha :
 
     public override decimal CalculateCost()
     {
-        return Beverage.CalculateCost() + CondimentData.Mocha.Cost;
+        return Beverage.CalculateCost() + CondimentData.Mocha.Cost[Size];
     }
 }

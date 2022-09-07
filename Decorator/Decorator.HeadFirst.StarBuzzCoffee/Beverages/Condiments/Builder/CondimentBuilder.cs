@@ -1,4 +1,6 @@
-﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
+﻿using System.Collections.Immutable;
+
+using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
 using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Factories;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
@@ -21,6 +23,15 @@ public sealed class CondimentBuilder
     public static CondimentBuilder SteamedMilk { get; } = new(CondimentData.SteamedMilk, BeverageFactory.WithSteamedMilk);
 
     public static CondimentBuilder Whip { get; } = new(CondimentData.Whip, BeverageFactory.WithWhip);
+
+    public static ImmutableList<CondimentBuilder> Values { get; } = new List<CondimentBuilder>
+    {
+        Nothing,
+        Soy,
+        Mocha,
+        SteamedMilk,
+        Whip
+    }.ToImmutableList();
 
     public CondimentData Data { get; }
 

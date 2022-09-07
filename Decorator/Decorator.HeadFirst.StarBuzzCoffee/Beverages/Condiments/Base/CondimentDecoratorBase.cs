@@ -1,4 +1,5 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages.Condiments.Base;
 
@@ -12,6 +13,12 @@ public abstract class CondimentDecoratorBase :
     }
 
     public string Description { get; protected set; }
+
+    public Size Size
+    {
+        get => Beverage.Size;
+        set => Beverage.Size = value;
+    }
 
     protected IBeverage Beverage { get; }
 

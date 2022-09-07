@@ -1,4 +1,6 @@
 ﻿using System.Text;
+
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
@@ -10,7 +12,10 @@ public abstract class BeverageBase
     protected BeverageBase()
     {
         description = "Unknown beverage";
+        Size = Size.Small;
     }
+
+    public Size Size { get; set; }
 
     /// <remarks>
     /// TODO: note that the description needs to be updated every time a new condiment is added to the system.
@@ -57,22 +62,22 @@ public abstract class BeverageBase
 
         if (HasMocha)
         {
-            condimentCost += CondimentData.Mocha.Cost;
+            condimentCost += CondimentData.Mocha.Cost[Size];
         }
 
         if (HasSoy)
         {
-            condimentCost += CondimentData.Soy.Cost;
+            condimentCost += CondimentData.Soy.Cost[Size];
         }
 
         if (HasSteamedMilk)
         {
-            condimentCost += CondimentData.SteamedMilk.Cost;
+            condimentCost += CondimentData.SteamedMilk.Cost[Size];
         }
 
         if (HasWhip)
         {
-            condimentCost += CondimentData.Whip.Cost;
+            condimentCost += CondimentData.Whip.Cost[Size];
         }
 
         return condimentCost;

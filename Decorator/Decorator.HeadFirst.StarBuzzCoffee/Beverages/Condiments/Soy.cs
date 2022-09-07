@@ -15,6 +15,6 @@ public class Soy :
 
     public override decimal CalculateCost()
     {
-        return Beverage.CalculateCost() + CondimentData.Soy.Cost;
+        return Beverage.CalculateCost() + CondimentData.Soy.Cost[Size];
     }
 }
