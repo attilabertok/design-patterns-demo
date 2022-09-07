@@ -1,4 +1,5 @@
 ﻿using Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages;
 
@@ -10,10 +11,8 @@ public class NullBeverage :
         Description = "That's all, thanks!";
     }
 
-    protected override decimal BaseCost => 0;
-
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return BaseCost;
+        return 0;
     }
 }

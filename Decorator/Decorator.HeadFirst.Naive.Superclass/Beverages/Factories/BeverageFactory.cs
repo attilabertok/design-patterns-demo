@@ -1,4 +1,5 @@
 ﻿using Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Factories;
 
@@ -14,6 +15,7 @@ public static class BeverageFactory
         where T : BeverageBase
     {
         beverage.HasSteamedMilk = true;
+        beverage.Condiments.Add(CondimentData.SteamedMilk);
 
         return beverage;
     }
@@ -22,6 +24,7 @@ public static class BeverageFactory
         where T : BeverageBase
     {
         beverage.HasMocha = true;
+        beverage.Condiments.Add(CondimentData.Mocha);
 
         return beverage;
     }

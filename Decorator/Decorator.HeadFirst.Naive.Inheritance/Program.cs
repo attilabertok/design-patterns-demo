@@ -7,7 +7,6 @@ using Decorator.HeadFirst.Naive.Inheritance.Beverages.Factories;
 using Decorator.HeadFirst.Naive.Inheritance.Infrastructure;
 using Decorator.HeadFirst.StarBuzzCoffee.Common;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
-using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Infrastructure;
 
 namespace Decorator.HeadFirst.Naive.Inheritance
@@ -47,7 +46,8 @@ namespace Decorator.HeadFirst.Naive.Inheritance
 
                 if (selection != SelectionOptions.Exit)
                 {
-                    SetupBeverage(selection);
+                    var beverage = SetupBeverage(selection);
+                    grandTotal += beverage.CalculateCost();
                 }
             }
             while (selection != SelectionOptions.Exit);
@@ -60,12 +60,13 @@ namespace Decorator.HeadFirst.Naive.Inheritance
             return UserIo.AskUntilValid(Selection.Keys.ToHashSet(), Message.RepeatSelection, DisplaySelection);
         }
 
-        private static void SetupBeverage(int selection)
+        private static BeverageBase SetupBeverage(int selection)
         {
             var beverage = Selection[selection].Invoke();
             SetSize(beverage);
-            grandTotal += beverage.CalculateCost();
             Console.WriteLine($"Alright, one {beverage.Size} {beverage.Description} coming up! Anything else?");
+
+            return beverage;
         }
 
         private static void SetSize(BeverageBase beverage)
@@ -87,7 +88,7 @@ namespace Decorator.HeadFirst.Naive.Inheritance
                 var beverage = item.Value.Invoke();
                 var costRange = beverage.CalculateCostRange();
 
-                Console.WriteLine($"{item.Key} : {beverage?.Description} (${costRange.Min} - ${costRange.Max})");
+                Console.WriteLine($"{item.Key} : {beverage.Description} (${costRange.Min} - ${costRange.Max})");
             }
 
             Console.WriteLine();

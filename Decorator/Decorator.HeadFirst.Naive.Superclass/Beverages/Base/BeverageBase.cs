@@ -1,6 +1,7 @@
 ﻿using System.Text;
 
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
@@ -13,7 +14,12 @@ public abstract class BeverageBase
     {
         description = "Unknown beverage";
         Size = Size.Small;
+        Condiments = new List<CondimentData>();
     }
+
+    public CoffeeData? CoffeeData { get; protected set; }
+
+    public IList<CondimentData> Condiments { get; }
 
     public Size Size { get; set; }
 
@@ -51,33 +57,32 @@ public abstract class BeverageBase
 
     public bool HasWhip { get; set; }
 
-    protected abstract decimal BaseCost { get; }
-
     /// <remarks>
     /// TODO: note that the cost calculation also needs to be updated every time a new condiment is added to the system.
     /// </remarks>
-    public virtual decimal CalculateCost()
+    public virtual decimal CalculateCost(Size? size = null)
     {
+        size ??= Size;
         decimal condimentCost = 0;
 
         if (HasMocha)
         {
-            condimentCost += CondimentData.Mocha.Cost[Size];
+            condimentCost += CondimentData.Mocha.Cost[size];
         }
 
         if (HasSoy)
         {
-            condimentCost += CondimentData.Soy.Cost[Size];
+            condimentCost += CondimentData.Soy.Cost[size];
         }
 
         if (HasSteamedMilk)
         {
-            condimentCost += CondimentData.SteamedMilk.Cost[Size];
+            condimentCost += CondimentData.SteamedMilk.Cost[size];
         }
 
         if (HasWhip)
         {
-            condimentCost += CondimentData.Whip.Cost[Size];
+            condimentCost += CondimentData.Whip.Cost[size];
         }
 
         return condimentCost;

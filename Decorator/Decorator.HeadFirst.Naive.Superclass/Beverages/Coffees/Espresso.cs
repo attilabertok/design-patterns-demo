@@ -1,4 +1,5 @@
 ﻿using Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Coffees;
@@ -8,13 +9,14 @@ public class Espresso :
 {
     public Espresso()
     {
-        Description = CoffeeData.Espresso.Description;
+        CoffeeData = CoffeeData.Espresso;
+        Description = CoffeeData.Description;
     }
 
-    protected override decimal BaseCost => CoffeeData.Espresso.BaseCost;
-
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return BaseCost + base.CalculateCost();
+        size ??= Size;
+
+        return CoffeeData!.BaseCost[size] + base.CalculateCost(size);
     }
 }

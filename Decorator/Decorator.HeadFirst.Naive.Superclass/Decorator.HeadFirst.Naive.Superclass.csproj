@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Beverages\Base\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
   <ItemGroup>
