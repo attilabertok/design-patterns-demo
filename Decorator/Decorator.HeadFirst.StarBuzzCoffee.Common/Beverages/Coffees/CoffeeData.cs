@@ -1,6 +1,6 @@
-﻿namespace Decorator.HeadFirst.StarBuzzCoffee.Common.Coffees;
+﻿namespace Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 
-public class CoffeeData
+public sealed class CoffeeData
 {
     private CoffeeData(string description, decimal baseCost)
     {

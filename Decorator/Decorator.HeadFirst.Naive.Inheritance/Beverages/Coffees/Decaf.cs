@@ -1,5 +1,5 @@
 ﻿using Decorator.HeadFirst.Naive.Inheritance.Beverages.Base;
-using Decorator.HeadFirst.StarBuzzCoffee.Common.Coffees;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 
 namespace Decorator.HeadFirst.Naive.Inheritance.Beverages.Coffees;
 

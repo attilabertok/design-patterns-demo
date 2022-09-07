@@ -1,6 +1,5 @@
 ﻿using System.Text;
-
-using Decorator.HeadFirst.StarBuzzCoffee.Common.Condiments;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.Naive.Superclass.Beverages.Base;
 

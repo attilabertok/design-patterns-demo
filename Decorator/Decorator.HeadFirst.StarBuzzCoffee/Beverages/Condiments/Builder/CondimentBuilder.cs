@@ -1,10 +1,10 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
 using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Factories;
-using Decorator.HeadFirst.StarBuzzCoffee.Common.Condiments;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages.Condiments.Builder;
 
-public class CondimentBuilder
+public sealed class CondimentBuilder
 {
     private CondimentBuilder(CondimentData data, Func<IBeverage, IBeverage> build)
     {

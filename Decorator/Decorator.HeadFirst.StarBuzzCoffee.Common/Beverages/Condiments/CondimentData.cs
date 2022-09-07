@@ -1,6 +1,6 @@
-﻿namespace Decorator.HeadFirst.StarBuzzCoffee.Common.Condiments;
+﻿namespace Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
-public class CondimentData
+public sealed class CondimentData
 {
     private CondimentData(string description, decimal cost)
     {
