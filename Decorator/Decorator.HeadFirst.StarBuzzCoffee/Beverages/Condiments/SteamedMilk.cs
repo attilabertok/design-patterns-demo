@@ -10,11 +10,7 @@ public class SteamedMilk :
     public SteamedMilk(IBeverage beverage)
         : base(beverage)
     {
-        Description += CondimentData.SteamedMilk.Description;
-    }
-
-    public override decimal CalculateCost()
-    {
-        return Beverage.CalculateCost() + CondimentData.SteamedMilk.Cost[Size];
+        CondimentData = CondimentData.SteamedMilk;
+        Description += CondimentData.Description;
     }
 }

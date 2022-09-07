@@ -6,18 +6,21 @@ using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Coffees;
 using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Condiments.Builder;
 using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Factories;
 using Decorator.HeadFirst.StarBuzzCoffee.Common;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Infrastructure;
+using Decorator.HeadFirst.StarBuzzCoffee.Infrastructure;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee
 {
     public static class Program
     {
-        private static readonly ImmutableDictionary<int, IBeverage> CoffeeSelection = new Dictionary<int, IBeverage>
+        private static readonly ImmutableDictionary<int, Func<IBeverage>> CoffeeSelection = new Dictionary<int, Func<IBeverage>>
         {
-            [SelectionOptions.DarkRoast] = BeverageFactory.Create<DarkRoast>(),
-            [SelectionOptions.Decaf] = BeverageFactory.Create<Decaf>(),
-            [SelectionOptions.Espresso] = BeverageFactory.Create<Espresso>(),
-            [SelectionOptions.HouseBlend] = BeverageFactory.Create<HouseBlend>(),
-            [SelectionOptions.Exit] = BeverageFactory.Create<NullBeverage>()
+            [SelectionOptions.DarkRoast] = BeverageFactory.Create<DarkRoast>,
+            [SelectionOptions.Decaf] = BeverageFactory.Create<Decaf>,
+            [SelectionOptions.Espresso] = BeverageFactory.Create<Espresso>,
+            [SelectionOptions.HouseBlend] = BeverageFactory.Create<HouseBlend>,
+            [SelectionOptions.Exit] = BeverageFactory.Create<NullBeverage>
         }.ToImmutableDictionary();
 
         private static readonly ImmutableDictionary<int, CondimentBuilder> CondimentSelection = new Dictionary<int, CondimentBuilder>
@@ -29,26 +32,23 @@ namespace Decorator.HeadFirst.StarBuzzCoffee
             [SelectionOptions.Exit] = CondimentBuilder.Nothing
         }.ToImmutableDictionary();
 
+        private static readonly ImmutableDictionary<int, Size> Sizes = Enumerable.Range(0, Size.Values.Count)
+            .ToImmutableDictionary(i => i, i => Size.Values[i]);
+
+        private static decimal grandTotal;
+
         public static void Main()
         {
-            Console.WriteLine("Hello, and welcome to StarBuzz coffee! What can I serve you with today?");
+            Console.WriteLine(Message.Greeting);
             int selection;
-            decimal grandTotal = 0;
             do
             {
                 DisplayCoffeeSelection();
-                while (!int.TryParse(Console.ReadLine(), out selection) && !CoffeeSelection.ContainsKey(selection))
-                {
-                    Console.WriteLine("Sorry, I'm not sure I caught that. Could you please repeat it?");
-                    DisplayCoffeeSelection();
-                }
+                selection = GetSelection();
 
                 if (selection != SelectionOptions.Exit)
                 {
-                    var beverage = CoffeeSelection[selection];
-                    Console.WriteLine($"One {beverage.Description} coming up! Would you like to add something to that?");
-                    beverage = AddCondiment(beverage);
-
+                    var beverage = SetupBeverage(selection);
                     grandTotal += beverage.CalculateCost();
                 }
             }
@@ -62,13 +62,8 @@ namespace Decorator.HeadFirst.StarBuzzCoffee
             int condimentSelection;
             do
             {
-                DisplayCondimentSelection();
-                while (!int.TryParse(Console.ReadLine(), out condimentSelection)
-                       && !CondimentSelection.ContainsKey(condimentSelection))
-                {
-                    Console.WriteLine("Sorry, I'm not sure I caught that. Could you please repeat it?");
-                    DisplayCondimentSelection();
-                }
+                DisplayCondimentSelection(beverage.Size);
+                condimentSelection = GetCondimentSelection(beverage);
 
                 if (condimentSelection != SelectionOptions.Exit)
                 {
@@ -81,21 +76,67 @@ namespace Decorator.HeadFirst.StarBuzzCoffee
             return beverage;
         }
 
+        private static IBeverage SetupBeverage(int selection)
+        {
+            var beverage = CoffeeSelection[selection]();
+            SetSize(beverage);
+            Console.WriteLine($"One {beverage.Size} {beverage.Description} coming up! Would you like to add something to that?");
+            beverage = AddCondiment(beverage);
+            Console.WriteLine($"Alright, one {beverage.Size} {beverage.Description} coming up! Anything else?");
+
+            return beverage;
+        }
+
+        private static void SetSize(IBeverage beverage)
+        {
+            Console.WriteLine($"One {beverage.Description}. What size would you like?");
+            beverage.Size = Sizes[GetSize(beverage)];
+        }
+
+        private static int GetSize(IBeverage beverage)
+        {
+            DisplaySizes(beverage);
+            return UserIo.AskUntilValid(Sizes.Keys.ToHashSet(), Message.RepeatSelection, () => DisplaySizes(beverage));
+        }
+
         private static void DisplayCoffeeSelection()
         {
             foreach (var item in CoffeeSelection)
             {
-                Console.WriteLine($"{item.Key} : {item.Value.Description} - ${item.Value.CalculateCost()}");
+                var beverage = item.Value();
+                var costRange = beverage.CalculateCostRange();
+
+                Console.WriteLine($"{item.Key} : {beverage.Description} (${costRange.Min} - ${costRange.Max})");
             }
 
             Console.WriteLine();
         }
 
-        private static void DisplayCondimentSelection()
+        private static void DisplayCondimentSelection(Size size)
         {
             foreach (var item in CondimentSelection)
             {
-                Console.WriteLine($"{item.Key} : {item.Value.Data.Description} - ${item.Value.Data.Cost}");
+                Console.WriteLine($"{item.Key} : {item.Value.Data.Description} - ${item.Value.Data.Cost[size]}");
+            }
+
+            Console.WriteLine();
+        }
+
+        private static int GetSelection()
+        {
+            return UserIo.AskUntilValid(CoffeeSelection.Keys.ToHashSet(), Message.RepeatSelection, DisplayCoffeeSelection);
+        }
+
+        private static int GetCondimentSelection(IBeverage beverage)
+        {
+            return UserIo.AskUntilValid(CondimentSelection.Keys.ToHashSet(), Message.RepeatSelection, () => DisplayCondimentSelection(beverage.Size));
+        }
+
+        private static void DisplaySizes(IBeverage beverage)
+        {
+            foreach (var item in Sizes)
+            {
+                Console.WriteLine($"{item.Key} : {item.Value.Value} (${beverage.CalculateCost(item.Value)})");
             }
 
             Console.WriteLine();

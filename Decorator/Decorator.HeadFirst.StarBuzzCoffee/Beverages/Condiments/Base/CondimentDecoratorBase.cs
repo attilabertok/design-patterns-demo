@@ -1,5 +1,6 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages.Condiments.Base;
 
@@ -20,7 +21,16 @@ public abstract class CondimentDecoratorBase :
         set => Beverage.Size = value;
     }
 
+    protected CondimentData? CondimentData { get; set; }
+
     protected IBeverage Beverage { get; }
 
-    public abstract decimal CalculateCost();
+    public decimal CalculateCost(Size? size = null)
+    {
+        size ??= Size;
+
+        var condimentCost = CondimentData?.Cost[size] ?? 0;
+
+        return Beverage.CalculateCost() + condimentCost;
+    }
 }

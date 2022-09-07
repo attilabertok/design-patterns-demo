@@ -1,20 +1,22 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages.Coffees;
 
 public class DarkRoast :
     BeverageBase
 {
-    private const decimal BaseCost = 0.99m;
-    private const string BaseDescription = "Most Excellent Dark Roast";
-
     public DarkRoast()
     {
-        Description = BaseDescription;
+        CoffeeData = CoffeeData.DarkRoast;
+        Description = CoffeeData.Description;
     }
 
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return BaseCost;
+        size ??= Size;
+
+        return CoffeeData!.BaseCost[size];
     }
 }

@@ -1,20 +1,22 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Coffees;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages.Coffees;
 
 public class HouseBlend :
     BeverageBase
 {
-    private const decimal BaseCost = 0.89m;
-    private const string BaseDescription = "House Blend Coffee";
-
     public HouseBlend()
     {
-        Description = BaseDescription;
+        CoffeeData = CoffeeData.HouseBlend;
+        Description = CoffeeData.Description;
     }
 
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return BaseCost;
+        size ??= Size;
+
+        return CoffeeData!.BaseCost[size];
     }
 }

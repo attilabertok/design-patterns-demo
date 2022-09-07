@@ -38,7 +38,6 @@ namespace Decorator.HeadFirst.Naive.Inheritance
         {
             Console.WriteLine(Message.Greeting);
             int selection;
-            grandTotal = 0;
             do
             {
                 DisplaySelection();

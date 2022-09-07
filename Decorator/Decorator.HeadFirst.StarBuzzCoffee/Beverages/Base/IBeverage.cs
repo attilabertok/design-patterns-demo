@@ -8,5 +8,5 @@ public interface IBeverage
 
     public Size Size { get; set; }
 
-    decimal CalculateCost();
+    decimal CalculateCost(Size? size = null);
 }

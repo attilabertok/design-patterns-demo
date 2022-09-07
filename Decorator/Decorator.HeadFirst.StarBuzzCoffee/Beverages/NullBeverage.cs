@@ -1,19 +1,18 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
+using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages;
 
 public class NullBeverage :
     BeverageBase
 {
-    private const decimal BaseCost = 0;
-
     public NullBeverage()
     {
         Description = "That's all, thanks!";
     }
 
-    public override decimal CalculateCost()
+    public override decimal CalculateCost(Size? size = null)
     {
-        return BaseCost;
+        return 0;
     }
 }

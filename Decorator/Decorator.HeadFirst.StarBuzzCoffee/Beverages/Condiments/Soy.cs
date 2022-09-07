@@ -10,11 +10,7 @@ public class Soy :
     public Soy(IBeverage beverage)
         : base(beverage)
     {
-        Description += CondimentData.Soy.Description;
-    }
-
-    public override decimal CalculateCost()
-    {
-        return Beverage.CalculateCost() + CondimentData.Soy.Cost[Size];
+        CondimentData = CondimentData.Soy;
+        Description += CondimentData.Description;
     }
 }

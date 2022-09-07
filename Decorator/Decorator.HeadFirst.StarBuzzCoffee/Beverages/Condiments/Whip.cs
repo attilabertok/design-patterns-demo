@@ -10,11 +10,7 @@ public class Whip :
     public Whip(IBeverage beverage)
         : base(beverage)
     {
-        Description += CondimentData.Whip.Description;
-    }
-
-    public override decimal CalculateCost()
-    {
-        return Beverage.CalculateCost() + CondimentData.Whip.Cost[Size];
+        CondimentData = CondimentData.Whip;
+        Description += CondimentData.Description;
     }
 }
