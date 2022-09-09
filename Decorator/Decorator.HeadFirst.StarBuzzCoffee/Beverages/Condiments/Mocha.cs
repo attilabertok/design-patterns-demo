@@ -1,6 +1,5 @@
 ﻿using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Base;
 using Decorator.HeadFirst.StarBuzzCoffee.Beverages.Condiments.Base;
-using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages;
 using Decorator.HeadFirst.StarBuzzCoffee.Common.Beverages.Condiments;
 
 namespace Decorator.HeadFirst.StarBuzzCoffee.Beverages.Condiments;

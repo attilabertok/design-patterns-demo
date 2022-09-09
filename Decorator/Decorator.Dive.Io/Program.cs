@@ -1,10 +1,4 @@
-﻿using Bogus;
-using Decorator.Dive.Io.Configuration;
-using Decorator.Dive.Io.DataSources;
-using Decorator.Dive.Io.Decorators;
-using Decorator.Dive.Io.Demos;
-using Decorator.Dive.Io.Interfaces;
-using Decorator.Dive.Io.SalaryLogging;
+﻿using Decorator.Dive.Io.Demos;
 
 namespace Decorator.Dive.Io
 {
