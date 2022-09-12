@@ -103,9 +103,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.Dive.Io", "Decora
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.GoF.Windowing", "Decorator\Decorator.GoF.Windowing\Decorator.GoF.Windowing.csproj", "{15C6F376-115E-498C-B8D6-083E3C8E0AD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Ican.CustomStringBuilder", "Decorator\Decorator.Ican.CustomStringBuilder\Decorator.Ican.CustomStringBuilder.csproj", "{C0F4797B-EBD9-4977-B7FD-669A49D0A10A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.Ican.CustomStringBuilder", "Decorator\Decorator.Ican.CustomStringBuilder\Decorator.Ican.CustomStringBuilder.csproj", "{C0F4797B-EBD9-4977-B7FD-669A49D0A10A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Ican.MultipleInheritance.Interfaces", "Decorator\Decorator.Ican.MultipleInheritance.Interfaces\Decorator.Ican.MultipleInheritance.Interfaces.csproj", "{1E42450D-9451-4885-A221-06C3EC47FF10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.Ican.MultipleInheritance.Interfaces", "Decorator\Decorator.Ican.MultipleInheritance.Interfaces\Decorator.Ican.MultipleInheritance.Interfaces.csproj", "{1E42450D-9451-4885-A221-06C3EC47FF10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Ican.Composition.Dynamic", "Decorator\Decorator.Ican.Composition.Dynamic\Decorator.Ican.Composition.Dynamic.csproj", "{14B83DBB-1377-47CD-A688-3331B1D2ACA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -269,6 +271,10 @@ Global
 		{1E42450D-9451-4885-A221-06C3EC47FF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E42450D-9451-4885-A221-06C3EC47FF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E42450D-9451-4885-A221-06C3EC47FF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -313,6 +319,7 @@ Global
 		{15C6F376-115E-498C-B8D6-083E3C8E0AD0} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 		{C0F4797B-EBD9-4977-B7FD-669A49D0A10A} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 		{1E42450D-9451-4885-A221-06C3EC47FF10} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
+		{14B83DBB-1377-47CD-A688-3331B1D2ACA1} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}
