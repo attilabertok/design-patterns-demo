@@ -109,6 +109,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.Ican.MultipleInhe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Ican.Composition.Dynamic", "Decorator\Decorator.Ican.Composition.Dynamic\Decorator.Ican.Composition.Dynamic.csproj", "{14B83DBB-1377-47CD-A688-3331B1D2ACA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Ican.Di.Common", "Decorator\Decorator.Ican.Di.Common\Decorator.Ican.Di.Common.csproj", "{5BC10467-2240-4CF4-AED4-C26DE488E5AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Ican.Di.AutoFac", "Decorator\Decorator.Ican.Di.AutoFac\Decorator.Ican.Di.AutoFac.csproj", "{D87C8453-E07A-48CC-94CD-10AB03005887}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -275,6 +279,14 @@ Global
 		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B83DBB-1377-47CD-A688-3331B1D2ACA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC10467-2240-4CF4-AED4-C26DE488E5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC10467-2240-4CF4-AED4-C26DE488E5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC10467-2240-4CF4-AED4-C26DE488E5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC10467-2240-4CF4-AED4-C26DE488E5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D87C8453-E07A-48CC-94CD-10AB03005887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D87C8453-E07A-48CC-94CD-10AB03005887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D87C8453-E07A-48CC-94CD-10AB03005887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D87C8453-E07A-48CC-94CD-10AB03005887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -320,6 +332,8 @@ Global
 		{C0F4797B-EBD9-4977-B7FD-669A49D0A10A} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 		{1E42450D-9451-4885-A221-06C3EC47FF10} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 		{14B83DBB-1377-47CD-A688-3331B1D2ACA1} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
+		{5BC10467-2240-4CF4-AED4-C26DE488E5AF} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
+		{D87C8453-E07A-48CC-94CD-10AB03005887} = {41444808-B9C8-4615-9F2D-B0140D5E2587}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}
