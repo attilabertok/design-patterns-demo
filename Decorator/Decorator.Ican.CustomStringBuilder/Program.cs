@@ -5,10 +5,7 @@
         public static void Main()
         {
             var cb = new CodeBuilder();
-
-            cb.AppendLine("class foo")
-                .AppendLine("{")
-                .AppendLine("}");
+            cb += "class foo" + "{" + "}";
 
             Console.WriteLine(cb.ToString());
         }
