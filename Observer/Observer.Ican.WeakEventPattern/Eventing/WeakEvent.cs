@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Observer.Ican.WeakEventPattern.Eventing.Interfaces;
 using Observer.Ican.WeakEventPattern.Infrastructure;
 using Observer.Ican.WeakEventPattern.Windowing;
