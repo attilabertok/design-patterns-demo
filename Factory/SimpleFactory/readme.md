@@ -1,6 +1,6 @@
 # Simple Factory
 
-The simple factory isn't actually a design pattern, it's more of a programming idiom.
+The Simple Factory isn't actually a design pattern, it's more of a programming idiom.
 
 ## Intent
 Simple Factory encapsulates object creation and separates the responsibility of creating objects from the responsibility of using the created objects.

@@ -120,11 +120,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.Ican.Di.SimpleInjector", "Decorator\Decorator.Ican.Di.SimpleInjector\Decorator.Ican.Di.SimpleInjector.csproj", "{371C0402-296B-4062-8F91-6360BDF93D7A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Factory", "Factory", "{C05A900B-303D-427F-8B5D-9DC64E897C91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleFactory", "SimpleFactory", "{88F9046F-F7A6-4C56-8051-8D9A236AAED3}"
 	ProjectSection(SolutionItems) = preProject
 		Factory\SimpleFactory\readme.md = Factory\SimpleFactory\readme.md
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleFactory", "SimpleFactory", "{88F9046F-F7A6-4C56-8051-8D9A236AAED3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory.HeadFirst.Pizzeria.SimpleFactory", "Factory\SimpleFactory\Factory.HeadFirst.Pizzeria.SimpleFactory\Factory.HeadFirst.Pizzeria.SimpleFactory.csproj", "{82848CDE-28DE-4FC0-8C38-F8CE785607BC}"
 EndProject
@@ -133,6 +133,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory.HeadFirst.Pizzeria.Common", "Factory\Factory.HeadFirst.Pizzeria.Common\Factory.HeadFirst.Pizzeria.Common.csproj", "{E5BEA1F5-49A6-4798-9BF5-F63BE0EFDB27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory.HeadFirst.Pizzeria.Factories", "Factory\Factory.HeadFirst.Pizzeria.Factories\Factory.HeadFirst.Pizzeria.Factories.csproj", "{310FE685-EDED-4E5B-994A-19CF0F07D9C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FactoryMethod", "FactoryMethod", "{1FDB41D8-B8C2-4887-8DE5-BB0D5411936B}"
+	ProjectSection(SolutionItems) = preProject
+		Factory\FactoryMethod\readme.md = Factory\FactoryMethod\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbstractFactory", "AbstractFactory", "{B1429858-6853-4F6B-AE93-FC3F4F581A0E}"
+	ProjectSection(SolutionItems) = preProject
+		Factory\AbstractFactory\readme.md = Factory\AbstractFactory\readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -391,6 +401,8 @@ Global
 		{69E3D9CA-DC58-4BC0-9971-0BF1B45A7FC9} = {88F9046F-F7A6-4C56-8051-8D9A236AAED3}
 		{E5BEA1F5-49A6-4798-9BF5-F63BE0EFDB27} = {C05A900B-303D-427F-8B5D-9DC64E897C91}
 		{310FE685-EDED-4E5B-994A-19CF0F07D9C6} = {C05A900B-303D-427F-8B5D-9DC64E897C91}
+		{1FDB41D8-B8C2-4887-8DE5-BB0D5411936B} = {C05A900B-303D-427F-8B5D-9DC64E897C91}
+		{B1429858-6853-4F6B-AE93-FC3F4F581A0E} = {C05A900B-303D-427F-8B5D-9DC64E897C91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE04887C-B830-4EF9-B08E-45D64A85A0F9}
